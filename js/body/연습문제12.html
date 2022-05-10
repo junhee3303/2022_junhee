@@ -1,0 +1,31 @@
+<body>
+    <h1>제목</h1>
+    <h3>클릭 횟수 : 0</h3>
+    </body>
+    <script>
+        document.onselectstart = () => {
+            return false;
+        };
+        document.ondragstart = () => {
+            return false;
+        };
+
+    let count = 0;
+    const h1 = document.querySelector('h1');
+    h1.addEventListener('click',() => {
+      const h3 = document.querySelector('h3');
+      h3.innerHTML = '클릭 횟수 : ${++count}';   
+    });
+
+    <body>
+<h3>글자 수 : 0</h3>
+<input type="text" name="title" id="title">
+</body>
+<script>
+const h3 = document.querySelector('h3');
+const input = document.querySelector('input');
+input.addEventListener('keyup', function(event) {
+const length = input.value.length;
+h3.textContent = `글자 수 : ${length}`;
+});
+</script>

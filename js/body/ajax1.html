@@ -1,0 +1,15 @@
+<body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+    const data = axios({
+    url: 'http://ggoreb.com/ajax/json/data2.jsp',
+    method: 'get',
+    params: {
+    'key': 'value'
+    }
+    });
+    data.then(function (result) {
+    console.log(result.data);
+    });
+    </script>
+</body>
